@@ -1,3 +1,4 @@
+using EduMentorAI.Application.Extensions;
 using EduMentorAI.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddOpenApi();
 
+// Registrar la capa Application
+builder.Services.AddApplicationServices();
+
 // Registrar la capa Infrastructure
+
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();

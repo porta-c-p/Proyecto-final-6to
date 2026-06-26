@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using EduMentorAI.Infrastructure.Persistence.Entities;
+using EduMentorAI.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 

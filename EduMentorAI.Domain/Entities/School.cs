@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EduMentorAI.Infrastructure.Persistence.Entities;
+namespace EduMentorAI.Domain.Entities;
 
 public partial class School
 {

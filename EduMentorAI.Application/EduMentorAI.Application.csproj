@@ -12,6 +12,21 @@
     <PackageReference Include="MediatR" Version="14.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Ai\Commands\" />
+    <Folder Include="Features\Ai\Queries\" />
+    <Folder Include="Features\Auth\Commands\" />
+    <Folder Include="Features\Auth\Queries\" />
+    <Folder Include="Features\Courses\Commands\" />
+    <Folder Include="Features\Courses\Queries\" />
+    <Folder Include="Features\Dashboard\Queries\" />
+    <Folder Include="Features\Reports\Commands\" />
+    <Folder Include="Features\Reports\Queries\" />
+    <Folder Include="Features\Students\Commands\" />
+    <Folder Include="Features\Teachers\Commands\" />
+    <Folder Include="Features\Teachers\Queries\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
