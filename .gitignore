@@ -1,0 +1,28 @@
+﻿# Rider / IntelliJ
+.idea/
+
+# Visual Studio
+.vs/
+
+# .NET
+bin/
+obj/
+
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Configuración local
+appsettings.Development.json
+
+# JetBrains
+*.DotSettings.user
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
