@@ -1,5 +1,6 @@
 ﻿using EduMentorAI.Application.Interfaces;
 using EduMentorAI.Infrastructure.Persistence.Context;
+using EduMentorAI.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +14,8 @@ public static class InfrastructureServiceExtensions
         IConfiguration configuration)
     {
         string connectionString = configuration.GetConnectionString("DefaultConnection")
-                                  ?? throw new InvalidOperationException("No se encontró la cadena de conexión DefaultConnection.");
+                                  ?? throw new InvalidOperationException(
+                                      "No se encontró la cadena de conexión DefaultConnection.");
 
         services.AddDbContext<EduMentorAiDbContext>(options =>
             options.UseMySql(
@@ -21,6 +23,8 @@ public static class InfrastructureServiceExtensions
                 ServerVersion.AutoDetect(connectionString)));
 
         services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
+
+        services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
         return services;
     }
